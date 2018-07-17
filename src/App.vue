@@ -16,7 +16,7 @@ export default {
   },
   data(){
     return {
-      branches: ['ramaA','ramaB','ramaC'];
+      branches: ['ramaA','ramaB','ramaC'],
     }
   }
 };
