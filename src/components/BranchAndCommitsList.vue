@@ -1,10 +1,8 @@
 <template>
   <div class="todoList">
     <h1>{{ msg }}</h1>
-    <BranchList :branches="branches"/>
-    
-    
-
+    <BranchList @branchSelected="branchChanged"/>
+    <CommitList :branchSelected="branchSelected" />    
   </div>
 </template>
 
@@ -12,16 +10,18 @@
 
 import axios from 'axios'
 import BranchList from "./BranchList"
+import CommitList from "./CommitList"
 
 export default {
   name: 'BranchAndCommitsList',
   components: {
     BranchList,
+    CommitList,
   },
   data() {
     return {
         msg: 'Latest todo-list yunior commits',
-        branches: [],
+        branchSelected : '',
         newTodo : {
             text: '',
             createdAt: Date.now(),
@@ -30,14 +30,10 @@ export default {
     };
   },
   methods: {
-      loadData() {
-          axios.get("https://api.github.com/repos/JuanAntonioQ/KataPotter/branches?access_token=f7116094ddd78181389ce891bafa9226aebba179")
-          .then(response => this.branches = response.data);
-      },
+      branchChanged(branchSelected){
+        this.branchSelected = branchSelected;
+      }
   },
-  created() {
-      this.loadData()
-  }
 };
 </script>
 
