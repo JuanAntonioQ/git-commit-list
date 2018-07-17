@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <BranchList/>
+    <BranchList :branches="branches"/>
   </div>
 </template>
 
@@ -14,6 +14,11 @@ export default {
     HelloWorld,
     BranchList,
   },
+  data(){
+    return {
+      branches: ['ramaA','ramaB','ramaC'];
+    }
+  }
 };
 </script>
 
