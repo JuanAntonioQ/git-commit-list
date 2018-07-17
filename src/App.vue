@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>prueba</h1>
-    <HelloWorld/>
+    <BranchList/>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld';
+import BranchList from './components/BranchList';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
+    BranchList,
   },
 };
 </script>
