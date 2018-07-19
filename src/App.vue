@@ -1,18 +1,16 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <h1>prueba</h1>
-    <HelloWorld/>
+    <BranchAndCommitsList/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import BranchAndCommitsList from './components/BranchAndCommitsList';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    BranchAndCommitsList,
   },
 };
 </script>
