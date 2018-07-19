@@ -1,22 +1,23 @@
 <template>
   <div id="app">
-    <BranchList :branches="branches"/>
+    <BranchAndCommitsList/>
   </div>
 </template>
 
 <script>
+
 import HelloWorld from './components/HelloWorld';
-import BranchList from './components/BranchList';
+import BranchAndCommitsList from './components/BranchAndCommitsList';
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
-    BranchList,
+    BranchAndCommitsList,
   },
   data(){
     return {
-      branches: ['ramaA','ramaB','ramaC'],
+      
     }
   }
 };
